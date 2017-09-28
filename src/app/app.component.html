@@ -10,7 +10,7 @@
               id="username"
               formControlName="username"
               class="form-control">
-              <span 
+              <span
                 *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched"
                 class="help-block">Please enter a valid username</span>
           </div>
@@ -21,7 +21,7 @@
               id="email"
               formControlName="email"
               class="form-control">
-              <span 
+              <span
                 *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched"
                 class="help-block">Please enter a valid email</span>
           </div>
@@ -43,11 +43,15 @@
             <input type="text" class="form-control" [formControlName]=i>
           </div>
         </div>
-        <span 
+        <span
           *ngIf="!signupForm.valid && signupForm.touched"
           class="help-block">Please enter valid data</span>
 
-        <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>        
+        <button
+          class="btn btn-primary"
+          type="submit"
+
+          >Submit</button>
       </form>
     </div>
   </div>

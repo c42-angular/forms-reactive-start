@@ -32,9 +32,11 @@ export class AppComponent implements OnInit {
   }
 
   forbiddenNames(control: FormControl): {[s: string]: boolean} {
-    if (this.forbiddenUserNames.indexOf(control.value) != -1) {
-      return {'forbiddenUserName': true};
+    if (this.forbiddenUserNames.indexOf(control.value) !== -1) {
+
+      return {'forbiddenUserName': false}; // validation fail -- doesn't seem to make much difference
+                                            // whether 'true' or 'false' value is returned
     }
-    return null;
+    return null; // return null if validation pass
   }
 }
